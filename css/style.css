@@ -1,0 +1,803 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 62.5%;
+    background-color: #FFDE50;
+
+    
+}
+body{
+    max-width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    text-align:center;
+    font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-size: 2.0rem;
+}
+li{
+    cursor: pointer;
+    font-size: 2.0rem;
+    text-align: start;
+
+}
+ul{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+h1{
+    font-size: 2.4rem;
+    color: #fff;
+}
+h2{
+    font-size: 2.4rem;
+}
+
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+.text-center{
+    text-align: center;
+}
+
+
+
+/* header */
+.header_wrapper{
+    width: 100%;
+    height: 120px;
+    background-color: #FFDE50;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rule_btn{
+    height: fit-content;
+    margin: 0 30px;
+}
+.start_btn{
+    width: 150px;
+}
+/* ------------ ルール説明のページ ------------- */
+.rule_screen{
+    display: none;
+}
+.rule_ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* main */
+/* ------------最初のページ----------- */
+.world_map{
+    width: 1024px;
+    height: 576px;
+    margin: auto;
+    background-image: url(../img/worldmap.jpeg);
+    background-size: cover;
+    z-index: 0;
+}
+/* ---------(共通)ベースの枠_背景を薄くする--------- */
+.bg_image{
+    width: 1024px;
+    height: 576px;
+    margin: auto;
+    background-image: url(../img/worldmap.jpeg);
+    background-size: cover;
+    position: relative;
+}
+.bg_mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+}
+
+/* ------------- (共通)ボタンデザイン ----------- */
+.btn{
+    background-color: #F38D8D;
+    border-bottom: 5px solid #E96C01;
+    border-radius: 100vh;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+.btn:hover{
+    margin-top: 3px;
+    color: white;
+    background: #F38D8D;
+    border-bottom: 2px solid #E96C01;
+}
+
+/* -----------(共通)緑の見出し_マイルの表示----------- */
+.layer_1{
+    width: 30%;
+    margin-left: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.0rem;
+    color: white;
+    border: 5px dotted white;
+    border-radius: 15px;
+    background-color: #C2E47C;
+}
+.layer_1 img{
+    width: 60px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* ---------------(共通)アイコン----------------- */
+/* 315度傾ける */
+.fa-rotate-315 {
+	transform: rotate(315deg);
+}
+.fa-rotate-22{
+    transform: rotate(22deg);
+}
+/* 色の変更 */
+.fa-skybule{
+    color: skyblue;
+}
+.fa-pink{
+    color: #efbad6;
+}
+.fa-yellow{
+    color: #FFDE50;
+}
+.fa-blush{
+    color: #eb6e80;
+}
+.fa-orange{
+    color: #FFD6AA;
+}
+
+
+/* -------------- 説明のページ ---------------- */
+.btn_wrap2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0;
+}
+.btn_wrap2 img{
+    width: 10%;
+}
+.margin{
+    margin: 30px auto 0;
+}
+
+
+
+
+
+/* --------------- じゃんけんのページ ------------ */
+.janken_screen{
+    display: none;
+}
+
+/* ------- 背景に重ねた_白い枠 ------- */
+.container{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: rgba(255,255,255,0.7);
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border-radius: 15px;
+}
+
+
+/* ---------- ふきだし ----------- */
+.balloon1 {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 2.4rem;
+    background: #FFDE50;
+    border-radius: 15px;
+}
+.balloon1:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top: 15px solid #FFDE50;
+}
+.balloon1 p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -------------相手の手---------- */
+.enemy img{
+    width: 150px;
+}
+/* ------------自分の手----------- */
+.janken_wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 35px 0 15px;
+}
+.janken_image{
+    margin-top: 15px;
+}
+.janken_image img{
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 10px 0;
+}
+.my_hand:hover{
+    background-color: #FFDE50;
+}
+.selected{
+    background-color: #FFDE50;
+}
+.jankenpon_box{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+/* ------------- おめでとうのページ ---------------- */
+.winner_screen{
+    display: none;
+}
+
+
+
+
+/* --------- (国_共通) 背景に重ねるカラー枠 -------- */
+.container_contry{
+    width: 90%;
+    height: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(254,245,212,0.8);
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.layer_2{
+    width: 30%;
+    margin-left: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.0rem;
+    color: #FBFBF0;
+    border: 5px dotted #FBFBF0;
+    border-radius: 15px;
+    background-color: #FFD6AA;
+}
+.layer_2 img{
+    width: 60px;
+    height: auto;
+    margin-right: 5px;
+}
+
+
+
+/* ------大陸用の枠------ */
+.container_continent{
+    width: 90%;
+    height: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(254,206,207,0.8);
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+/* -----------------------国別のページ------------------ */
+.contry_screen{
+    display: none;
+}
+
+.earth_wrap{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.earth_wrap img{
+    width: 10%;
+    margin: 0 10px;
+    animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+    0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+    100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+}
+.typ_text {
+    font-size: 3.6rem;
+}
+
+.content_wrap{
+    display: flex;
+}
+.contryflag_wrap{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contryflag_wrap img{
+    width: 80%;
+    margin: 10px 0 20px;
+}
+.point_wrap{
+    font-size: 3.0rem;
+    display: flex;
+    align-items: center;
+}
+
+dl{
+    width: 80%;
+}
+dl > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+dt {
+    width: 40%;
+    font-size: 1.8rem;
+    text-align: start;
+    font-weight: bold;
+}
+dd {
+    flex: auto;
+    font-size: 1.8rem;
+    text-align: start;
+}
+.contenttext_wrap{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contenttext_wrap>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.heading{
+    position: relative;
+}
+.heading:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 7px;
+    background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+    background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+    }
+
+.contenttext_wrap h2{
+    font-size: 3.0rem;
+}
+.contenttext_wrap h3{
+    font-size: 1.8rem;
+    margin: 0 30px 0;
+}
+.contenttext_wrap p{
+    font-size: 2.0rem;
+    margin: 30px auto;
+    line-height: 4.0rem;
+    text-align: start;
+    margin-left: 15px;
+}
+.contenttext{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.btn_wrap{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 50px 0 20px;
+}
+
+.btn_wrap img{
+    width: 10%;
+}
+
+
+
+/* 大陸 */
+.continent_screen{
+    display: none;
+}
+.next_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.next_box img{
+    width: 60%;
+    margin: 0 0 30px;
+}
+.next_box2 img{
+    width: 35%;
+    margin: 0 0 20px;
+}
+.next_box3 img{
+    margin: 0 0 10px;
+}
+/* 国別 */
+/* .asia_1{
+    display: none;
+} 
+.asia_2{
+    display: none;
+} */
+.asia_2 .content_wrap img{
+    width: auto;
+    height: 200px;
+}
+.asia_2 .heading:after {
+    width: 95%;
+}
+
+/* .asia_3{
+    display: none;
+}*/
+
+/* .asia_4{
+    display: none;
+} */
+.asia_4 .heading:after {
+    width: 90%;
+}
+.asia_4 dl{
+    width: 80%;
+}
+.asia_4 dl > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.asia_4 dt {
+    width: 30%;
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: bold;
+}
+.asia_4 dd {
+    flex: auto;
+    font-size: 1.6rem;
+    text-align: start;
+}
+
+/* .asia_5{
+    display: none;
+}  */
+.asia_5 .heading:after {
+    width: 70%;
+}
+.asia_5 dl{
+    width: 80%;
+}
+.asia_5 dl > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.asia_5 dt {
+    width: 30%;
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: bold;
+}
+.asia_5 dd {
+    flex: auto;
+    font-size: 1.6rem;
+    text-align: start;
+}
+
+
+
+/* .europe_1{
+    display: none;
+}*/
+.europe_1 .heading:after {
+    width: 70%;
+}
+/* .europe_2{
+    display: none;
+} */
+.europe_2 .heading:after {
+    width: 80%;
+}
+/* .europe_3{
+    display: none;
+} */
+.europe_3 .heading:after {
+    width: 70%;
+}
+/* .europe_4{
+    display: none;
+} */
+.europe_4 .heading:after {
+    width: 70%;
+}
+/* .europe_5{
+    display: none;
+} */
+.europe_5 .heading:after {
+    width: 80%;
+}
+/* .africa_1{
+    display: none;
+} */
+.africa_1 .heading{
+    flex-direction: column;
+}
+.africa_1 .heading:after {
+    width: 90%;
+}
+.africa_1 .contenttext>p{
+    margin: 20px auto;
+}
+.africa_1 dl{
+    width: 80%;
+}
+.africa_1 dl > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.africa_1 dt {
+    width: 30%;
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: bold;
+}
+.africa_1 dd {
+    flex: auto;
+    font-size: 1.6rem;
+    text-align: start;
+}
+
+/* .africa_2{
+    display: none;
+} */
+
+
+/* .africa_3{
+    display: none;
+} */
+.africa_3 dl{
+    width: 80%;
+}
+.africa_3 dl > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.africa_3 dt {
+    width: 30%;
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: bold;
+}
+.africa_3 dd {
+    flex: auto;
+    font-size: 1.6rem;
+    text-align: start;
+}
+
+/* .africa_4{
+    display: none;
+} */
+.africa_4 .heading:after {
+    width: 90%;
+}
+.africa_4 dl{
+    width: 80%;
+}
+.africa_4 dl > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.africa_4 dt {
+    width: 30%;
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: bold;
+}
+.africa_4 dd {
+    flex: auto;
+    font-size: 1.6rem;
+    text-align: start;
+}
+/* .africa_5{
+    display: none;
+} */
+/* .southAmerica_1{
+    display: none;
+} */
+.southAmerica_1 .heading:after {
+    width: 90%;
+}
+/* .southAmerica_2{
+    display: none;
+} */
+.southAmerica_2 .heading:after {
+    width: 90%;
+}
+/* .southAmerica_3{
+    display: none;
+} */
+.southAmerica_1 .heading:after {
+    width: 90%;
+}
+/* .southAmerica_4{
+    display: none;
+} */
+/* .southAmerica_5{
+    display: none;
+} */
+.southAmerica_5 .heading:after {
+    width: 90%;
+}
+/* .northAmerica_1{
+    display: none;
+} */
+.northAmerica_1 .heading:after {
+    width: 90%;
+}
+/* .northAmerica_2{
+    display: none;
+} */
+.northAmerica_2 .heading:after {
+    width: 90%;
+}
+/* .northAmerica_3{
+    display: none;
+} */
+.northAmerica_3 .heading:after {
+    width: 90%;
+}
+/* .northAmerica_4{
+    display: none;
+} */
+.northAmerica_4 .heading:after {
+    width: 90%;
+}
+/* .northAmerica_5{
+    display: none;
+} */
+/* .oceania_1{
+    display: none;
+} */
+.oceania_1 dl{
+    width: 80%;
+}
+.oceania_1 dl > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.oceania_1 dt {
+    width: 30%;
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: bold;
+}
+.oceania_1 dd {
+    flex: auto;
+    font-size: 1.6rem;
+    text-align: start;
+}
+/* .oceania_2{
+    display: none;
+} */
+/* .oceania_3{
+    display: none;
+} */
+.oceania_3 .heading:after {
+    width: 90%;
+}
+/* .oceania_4{
+    display: none;
+} */
+.oceania_4 .heading{
+    flex-direction: column;
+}
+.oceania_4 .heading:after {
+    width: 90%;
+}
+/* .oceania_5{
+    display: none;
+}  */
+
+
+
+/* ---------ゲームオーバーページ-------- */
+.gameOver{
+    display: none;
+}
+.kids_wrap{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+.kids_wrap img{
+    width: 40%;
+}
+
+/* ------ゲームオーバーの枠------ */
+.container_gameOver{
+    width: 90%;
+    height: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(213,202,232,0.8);
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* footer */
+.footer_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFDE50;
+    height: 100px;
+}
+.footer_wrap img{
+    width: 20%;
+    margin: 0 auto;
+}

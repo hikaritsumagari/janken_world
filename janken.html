@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="header_wrapper">
+      <h1>じゃん・けん・ぽん！ワールドツアー</h1>
+      <button id="rule_btn" class="rule_btn btn">せつめいを読む</button>
+      <button id="start_btn" class="start_btn btn">スタート！</a>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!------- 最初の画面 -------->
+    <section>
+      <div class="world_map"></div>
+    </section>
+    <!------- ここまで 最初のページ --------->
+
+    <!------------- ルール説明のページ ------------------->
+    <div class="bg_image rule_screen">
+      <div class="bg_mask">
+        <div class="container_continent rule">
+          <div class="layer_1">
+            <i class="fas fa-plane fa-1x fa-skybule fa-rotate-315"></i>
+            <h2>ルールせつめい</h2>
+          </div>
+
+          <h2 class="text-center margin">じゃんけんに勝って世界を旅しよう<i class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+          </h2>
+          <ul class="margin rule_ul">
+            <li> 最初に100マイルプレゼントするよ</li>
+            <li> じゃんけんに勝つと30マイルGETして先にすすめるよ</li>
+            <li> 負けると -10マイル、あいこだと 0マイルだよ</li>
+            <li> マイルが0になるとゲームオーバーだよ</li>
+            <li> 何ヵ国旅することができるかな？</li>
+          </ul>
+          <div class="btn_wrap2">
+            <img src="img/kids1.png" alt="">
+            <img src="img/kids2.png" alt="">
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="return_btn" ()>ゲームスタート！</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------------// ここまで ルール説明のページ --------------->
+
+
+    <!------- じゃんけんのページ ------->
+    <section class="bg_image janken_screen">
+      <div class="bg_mask">
+        <div class="container">
+          <div class="layer_1">
+            <i class="fas fa-plane fa-1x fa-skybule fa-rotate-315"></i>
+            <h2 id="point">100</h2>
+            <h2> マイル</h2>
+          </div>
+          <p id="result" class="balloon1">対決しよう！きみの手を選んでね！</p>
+          <div id="enemyPanel" class="enemy"><img id="" src="img/janken3.png"></div>
+
+          <div class="janken_wrapper">
+            <button class="janken_btn btn" id="janken_btn" ()>じゃん・けん・ぽん！</button>
+            <ul class="janken_image">
+              <li id="gu_btn"><img class="my_hand" src="img/janken0.png" onclick="my_hand(this)"></li>
+              <li id="cho_btn"><img class="my_hand" src="img/janken1.png" onclick="my_hand(this)"></li>
+              <li id="par_btn"><img class="my_hand" src="img/janken2.png" onclick="my_hand(this)"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------// ここまで じゃんけんのページ ---------->
+
+    <!------------------- アジア1_韓国 ------------------->
+    <section class="bg_image asia_1 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 1カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Asia </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/asia1_korea.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ソウル</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>韓国語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約4分の1</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>韓国</h2>
+                <h3>Republic of Korea</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 儒教の影響がつよく、礼儀を大切にするよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> お茶わんをテーブルに置いたまま食べるのがマナー
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> キムチ専用の冷蔵庫があり、1歳からキムチを食べるよ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アジア1_韓国 --------------->
+
+
+    <!------------------- アジア2_ネパール ------------------->
+    <section class="bg_image asia_2 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 2カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Asia </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/asia2_nepal.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>カトマンズ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ネパール語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>北海道の約1.8倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ネパール</h2>
+                <h3>Federal Democratic Republic of Nepal</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 世界最高峰エベレストは標高8850m<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> エベレストは4500万年前は海の底だった
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ネパール語でありがとうは「ダンネバード」
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アジア2_ネパール --------------->
+
+
+
+    <!------------------- アジア3_インド ------------------->
+    <section class="bg_image asia_3 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 3カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Asia </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/asia3_india.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>デリー</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ヒンディー語、英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約9倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>インド</h2>
+                <h3>India</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 天気や体調などによって使うスパイスを決めるよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> ヒンドゥー教では牛は神聖な生き物なので食べないよ
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 数字の「ゼロ」を発見！数学がさかんだよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 九九は20の段まで暗記しているよ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アジア3_インド --------------->
+
+    <!------------------- アジア4_アラブ首長国連邦 ------------------->
+    <section class="bg_image asia_4 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 4カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Asia </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/asia4_arab.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>アブダビ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>アラビア語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>北海道より やや小さい</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>アラブ首長国連邦</h2>
+                <h3>United Arab Emirates</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 国のなかに7つの国があるよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 住民のほとんどが外国人！エミラティは20%以下
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ドバイにあるブルジュ・ハリファは828mで世界一高い
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アジア4_アラブ首長国連邦 --------------->
+
+
+    <!------------------- アジア5_イスラエル ------------------->
+    <section class="bg_image asia_5 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 5カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Asia </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/asia5_israel.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>エルサレム *</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ヘブライ語、アラビア語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>四国程度の広さ</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>イスラエル</h2>
+                <h3>State of Israel</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> エルサレムには3つの宗教の聖地があるよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 世界的にみても科学技術がトップレベル
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 毎年1400社ほどの会社が誕生している起業大国！
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="continent_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アジア5_イスラエル --------------->
+
+    <!------------------- 次はヨーロッパへ行く ------------------->
+    <section class="bg_image europeContinent continent_screen">
+      <div class="bg_mask">
+        <div class="container_continent">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">次はヨーロッパへ行こう<i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i><i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+            </p>
+          </div>
+          <div class="next_box">
+            <img src="img/asia_europe.jpeg" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+    <!----------------// ここまで 次はヨーロッパへ行く --------------->
+
+
+    <!------------------- ヨーロッパ1_ギリシャ ------------------->
+    <section class="bg_image europe_1 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 6カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Europe </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/europe1_greece.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>アテネ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ギリシャ語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約3分の1</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ギリシャ</h2>
+                <h3>Hellenic Republic</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> ヨーロッパ、アジア、アフリカとの交差点<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> アテネは3000年以上の歴史をもつ最も古い都市
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 世界一長い国歌は158番まであるよ！
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで ヨーロッパ1_ギリシャ --------------->
+
+
+    <!------------------- ヨーロッパ2_スウェーデン ------------------->
+    <section class="bg_image europe_2 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 7カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Europe </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/europe2_sweden.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ストックホルム</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スウェーデン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約1.2倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>スウェーデン</h2>
+                <h3>Kingdom of Sweden</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> ノーベル賞の国！日本初の受賞者は湯川秀樹<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> ザリガニは夏の味！みんなで集まってたくさん食べるよ
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> おしゃべりタイム「フィーカ」は一日に何度も楽しむよ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで ヨーロッパ2_スウェーデン --------------->
+
+    <!------------------- ヨーロッパ3_イギリス ------------------->
+    <section class="bg_image europe_3 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 8カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Europe </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/europe3_unitedkingdom.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ロンドン</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約3分の2</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>イギリス</h2>
+                <h3>United Kingdom</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 4つの国が合わさってできた立憲君主国家<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> サッカー、テニス、ラグビーなどが誕生したよ
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> イギリスで活躍！日本生まれの作家カズオ・イシグロ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで ヨーロッパ3_イギリス --------------->
+
+    <!------------------- ヨーロッパ4_フランス ------------------->
+    <section class="bg_image europe_4 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 9カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Europe </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/europe4_france.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>パリ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>フランス語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約1.5倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>フランス</h2>
+                <h3>France Republic</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 花の都「パリ」はカタツムリの形<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 柔道の競技人口が日本よりも多い強豪国！
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> フランスパンはもともと丸い形だった
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで ヨーロッパ4_フランス --------------->
+
+    <!------------------- ヨーロッパ5_ポルトガル ------------------->
+    <section class="bg_image europe_5 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 10カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Europe </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/europe5_portugal.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>リスボン</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ポルトガル語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約4分の1</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ポルトガル</h2>
+                <h3>Portuguese Republic</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> イワシとタコをよく食べるよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> コップやボタン、カステラが日本へ伝わった
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ユーラシア大陸の最西端にあるのがロカ岬
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="continent_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで ヨーロッパ5_ポルトガル --------------->
+
+    <!------------------- 次はアフリカへ行く ------------------->
+    <section class="bg_image africaContinent continent_screen">
+      <div class="bg_mask">
+        <div class="container_continent">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">次はアフリカへ行こう<i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i><i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+            </p>
+          </div>
+          <div class="next_box2 next_box">
+            <img src="img/africa.jpeg" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!----------------// ここまで 次はアフリカへ行く --------------->
+
+    <!------------------- アフリカ1_アルジェリア ------------------->
+    <section class="bg_image africa_1 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 11カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Africa </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/africa1_algeria.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>アルジェ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>アラビア語、ベルベル語、フランス語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約6.3倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>アルジェリア</h2>
+                <h3>People's Democratic Republic of Algeria</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 80%以上が砂漠の国！<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> ガルダイアはサハラ砂漠の中にあるオアシス都市
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 国民食「クスクス」はとうもろこしの粉だよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 日本のまんがや武道が人気！
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アフリカ1_アルジェリア --------------->
+
+    <!------------------- アフリカ2_ケニア ------------------->
+    <section class="bg_image africa_2 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 12カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Africa </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/africa2_kenya.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ナイロビ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語、スワヒリ語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約1.5倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ケニア</h2>
+                <h3>Republic of Kenya</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> バラの花を世界中に届けている輸出国<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 日本の「もったいない」が世界に発信されたよ
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> スワヒリ語で「こんにちは」ハバリ・ガーニ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アフリカ2_ケニア --------------->
+
+    <!------------------- アフリカ3_マダガスカル ------------------->
+    <section class="bg_image africa_3 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 13カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Africa </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/africa3_madagascar.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>アンタナナリボ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>マダガスカル語、フランス語、英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約1.6倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>マダガスカル</h2>
+                <h3>Republic of Madagascar</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> キツネザルがいるのはマダガスカルだけ！<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 世界のバニラの60%を生産しているよ
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 今でも新種のカメレオンが発見されている聖地
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アフリカ3_マダガスカル --------------->
+
+    <!------------------- アフリカ4_南アフリカ ------------------->
+    <section class="bg_image africa_4 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 14カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Africa </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/africa4_south-africa.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>プレトリア</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語、アフリカーンス語、ズールー語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約1.6倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>南アフリカ</h2>
+                <h3>Republic of South Africa</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 公用語は11言語もあり、様々な民族が暮らす<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> ルイボスティーは南アフリカだけで作られているよ！
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ラグビーワールドカップ3度制覇の強豪国
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アフリカ4_南アフリカ --------------->
+
+    <!------------------- アフリカ5_ガーナ ------------------->
+    <section class="bg_image africa_5 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 15カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Africa </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/africa5_ghana.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>アクラ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語、各民族語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約3分の2</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ガーナ</h2>
+                <h3>Republic of Ghana</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 日本のカカオの75%はガーナから輸入しているよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 野口英世が黄熱病研究のためガーナに渡ったよ
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> アフリカの中で最初に独立をした国
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="continent_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで アフリカ5_ガーナ --------------->
+
+    <!------------------- 次は南アメリカへ行く ------------------->
+    <section class="bg_image southAmericaContinent continent_screen">
+      <div class="bg_mask">
+        <div class="container_continent">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">次は南アメリカへ行こう<i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i><i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+            </p>
+          </div>
+          <div class="next_box2 next_box next_box">
+            <img src="img/southamerica.jpeg" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+    </section>
+    <!----------------// ここまで 次は南アメリカへ行く --------------->
+
+    <!------------------- 南アメリカ1_ブラジル ------------------->
+    <section class="bg_image southAmerica_1 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 16カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> South America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/southAmerica1_brazil.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ブラジリア</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ポルトガル語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約22倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ブラジル</h2>
+                <h3>Federative Republic of Brazil</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> アマゾンは「地球の肺」と呼ばれている<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 一年で四国と同じだけの面積の森林が消えている
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ブラジルの国民食は「フェイジョアーダ」
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 南アメリカ1_ブラジル --------------->
+
+    <!------------------- 南アメリカ2_アルゼンチン ------------------->
+    <section class="bg_image southAmerica_2 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 17カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> South America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/southAmerica2_argentina.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ブエノスアイレス</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スペイン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約7.5倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>アルゼンチン</h2>
+                <h3>Argentine Republic</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 牛肉の消費量は1人年間51kgで日本人の8倍！<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 片側8車線の大通りは道路幅140mで世界一
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ハンパで牛を育てるガウチョは国の誇りの象徴
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 南アメリカ2_アルゼンチン --------------->
+
+    <!------------------- 南アメリカ3_ボリビア ------------------->
+    <section class="bg_image southAmerica_3 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 18カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> South America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/southAmerica3_bolivia.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ラパス</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スペイン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約3倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ボリビア</h2>
+                <h3>Plurinational State of Bolivia</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 世界でいちばん標高が高い首都ラパス<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> アンデス山脈で育まれた伝統音楽「フォルクローレ」
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 天空の鏡と呼ばれるウユニ塩湖があるよ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 南アメリカ3_ボリビア --------------->
+
+    <!------------------- 南アメリカ4_ペルー ------------------->
+    <section class="bg_image southAmerica_4 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 19カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> South America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/southAmerica4_peru.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>リマ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スペイン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約3.4倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ペルー</h2>
+                <h3>Republic of Peru</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 1400年以上前に描かれたナスカの地上絵が今も残る<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> インカ帝国の太陽の祭り「インティ・ライミ」
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 空中都市マチュピチュは皇帝の別荘として築かれた
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 南アメリカ4_ペルー --------------->
+
+    <!------------------- 南アメリカ5_コロンビア ------------------->
+    <section class="bg_image southAmerica_5 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 20カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> South America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/southAmerica5_colombia.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ボゴタ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スペイン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約3倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>コロンビア</h2>
+                <h3>Republic of Colombia</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 花の輸出量は世界有数の花の国！<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> コロンビアのエメラルドは良質で産出量も世界一
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> スープ料理が豊富で、バナナのスープもあるよ！
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="continent_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 南アメリカ5_コロンビア  --------------->
+
+    <!------------------- 次は北アメリカへ行く ------------------->
+    <section class="bg_image northAmericaContinent continent_screen">
+      <div class="bg_mask">
+        <div class="container_continent">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">次は北アメリカへ行こう<i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i><i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+            </p>
+          </div>
+          <div class=" next_box3 next_box">
+            <img src="img/northamerica.jpeg" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+    </section>
+    <!----------------// ここまで 次は北アメリカへ行く --------------->
+
+    <!------------------- 北アメリカ1_コスタリカ ------------------->
+    <section class="bg_image northAmerica_1 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 20カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> North America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/northAmerica1_costarica.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>サンホセ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スペイン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>九州と四国ほどの広さ</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>コスタリカ</h2>
+                <h3>Republic of Costa Rica</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 豊かな生態系をもつエコツーリズム発祥国<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 色鮮やかで美しい鳥「ケツァール」が生息している
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 馬の祭りトペではカウボーイがパレードするよ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 北アメリカ1_コスタリカ --------------->
+
+    <!------------------- 北アメリカ2_キューバ ------------------->
+    <section class="bg_image northAmerica_2 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 22カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> North America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/northAmerica2_cuba.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ハバナ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スペイン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>本州の約半分</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>キューバ</h2>
+                <h3>Republic of Cuba</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 住民122人に対して医師が1人の医療先進国<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 国交断絶前に輸入されたクラシックカーが今も走っている
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 国民的なスポーツは野球だよ！
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 北アメリカ2_キューバ --------------->
+
+    <!------------------- 北アメリカ3_メキシコ ------------------->
+    <section class="bg_image northAmerica_3 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 23カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> North America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/northAmerica３_mexico.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>メキシコシティ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>スペイン語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約5.3倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>メキシコ</h2>
+                <h3>United Mexican States</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> マヤ文明やアステカ文明など高度な文化を築いていた<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> がいこつがいっぱいの「死者の日」があるよ
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 職業体験テーマパーク・キッザニアはメキシコ生まれ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 北アメリカ3_メキシコ --------------->
+
+    <!------------------- 北アメリカ4_アメリカ ------------------->
+    <section class="bg_image northAmerica_4 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 24カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> North America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/northAmerica4_america.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ワシントンD.C.</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約25倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>アメリカ</h2>
+                <h3>the United States of America</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 広大で多様・多文化の移民大国！50の州があるよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 世界の宇宙産業の中心で、軍事費は世界一
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 世界初のテーマパーク「ナッツベリーファーム」
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 北アメリカ4_アメリカ --------------->
+
+    <!------------------- 北アメリカ5_カナダ ------------------->
+    <section class="bg_image northAmerica_5 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 25カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> North America </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/northAmerica5_canada.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>オタワ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語、フランス語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約24倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>カナダ</h2>
+                <h3>Canada</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 広大な国土をもつため、6つの時差があるよ<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 氷の上の格闘技アイスホッケーが人気
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 地球温暖化でホッキョクグマが南へ移動している
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="continent_btn(this)">オセアニアへ進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで 北アメリカ5_カナダ --------------->
+
+    <!------------------- 最後はオセアニアへ行く ------------------->
+    <section class="bg_image oceaniaContinent continent_screen">
+      <div class="bg_mask">
+        <div class="container_continent">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">最後はオセアニアへ行こう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i><i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+            </p>
+          </div>
+          <div class=" next_box3 next_box">
+            <img src="img/northamerica.jpeg" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+    </section>
+    <!----------------// ここまで 最後はオセアニアへ行く --------------->
+
+    <!------------------- オセアニア1_ツバル ------------------->
+    <section class="bg_image oceania_1 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 26カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Oceania </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/oceania1_tuvalu.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>フナフティ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ツバル語、英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>品川区よりやや大きい</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ツバル</h2>
+                <h3>Tuvalu</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 9つの環礁(ドーナツ状のサンゴ礁)起源の島<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 海抜が5m程のため温暖化が進むと海に沈んでしまう
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 多くの人々が自給自足の生活を送っているよ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで オセアニア1_ツバル --------------->
+
+    <!------------------- オセアニア2_ニュージーランド ------------------->
+    <section class="bg_image oceania_2 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 27カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Oceania </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/oceania2_newzealand.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ウェリントン</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語、マオリ語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約4分の3</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>ニュージーランド</h2>
+                <h3>New Zealand</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 羊の数が人口の6倍！2750万頭といわれている<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> ラグビー「オールブラックス」は国民の人気者！
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 早寝早起きで子どもは20時、大人も22時には寝るよ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで オセアニア2_ニュージーランド --------------->
+
+    <!------------------- オセアニア3_オーストラリア ------------------->
+    <section class="bg_image oceania_3 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 28カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Oceania </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/oceania3_australia.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>キャンベラ</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約20倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>オーストラリア</h2>
+                <h3>Commonwealth of Australia</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 大陸がそのまま国になっているオセアニア最大の国<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> グレート・バリア・リーフは世界最大のサンゴ礁
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> 世界一まっすぐに伸びる線路があり、距離は478km！
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで オセアニア3_オーストラリア --------------->
+
+    <!------------------- オセアニア4_パプアニューギニア ------------------->
+    <section class="bg_image oceania_4 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 29カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Oceania </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/oceania4_papua-new-guinea.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>ポートモレスビー</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>ピジン英語、英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>日本の約1.5倍</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>パプアニューギニア</h2>
+                <h3>Independen Stet bilong Papua Niugini</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 異なる言語をもつ800以上の少数民族が暮らす<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 世界に約40種類にいる極楽鳥は国旗に描かれている国鳥
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ピジン英語でこんにちは「アピヌン」
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <img src="img/kids1.png" alt="">
+            <button class="btn" id="" () onclick="next_btn(this)">次のジャンケンに進む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで オセアニア4_パプアニューギニア --------------->
+
+    <!------------------- オセアニア5_パラオ ------------------->
+    <section class="bg_image oceania_5 contry_screen">
+      <div class="bg_mask">
+        <div class="container_contry">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">おめでとう <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> きみの勝ちだよ <i
+                class="fas fa-splotch fa-lg fa-yellow"></i> 30カ国目に到着しました <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+              <i class="fas fa-route faa-tada fa-lg faa-flash animated fa-pink"></i>
+            </p>
+          </div>
+          <h2 class="text-center"><i class="fas fa-map-marked-alt fa-lg fa-blush"></i> Oceania </h2>
+          <div class="content_wrap">
+            <div class="contryflag_wrap ">
+              <img src="img/oceania5_palau.png" alt="">
+              <dl class="contry_item">
+                <div>
+                  <dt>首都</dt>
+                  <dd>マルキョク</dd>
+                </div>
+                <div>
+                  <dt>主な言語</dt>
+                  <dd>パラオ語、英語</dd>
+                </div>
+                <div>
+                  <dt>面積</dt>
+                  <dd>屋久島とほぼ同じ</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contenttext_wrap">
+              <div class="heading">
+                <h2>パラオ</h2>
+                <h3>Republic of Palau</h3>
+              </div>
+              <div class="contenttext">
+                <p><i class="far fa-lightbulb fa-lg fa-yellow"></i> 300以上の島じまからなる温暖な国<br><i
+                    class="far fa-lightbulb fa-lg fa-yellow"></i> 「ダイジョウブ」や「ベントウ」などのパラオ語がある
+                  <br><i class="far fa-lightbulb fa-lg fa-yellow"></i> ビールを飲むことを意味するのは「ツカレナオース」
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+
+            <p class="typ_text">30カ国制覇 <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> また遊ぼう <i
+                class="fas fa-splotch fa-lg fa-yellow"></i>
+
+            </p>
+            <img src="img/kids1.png" alt="">
+            <img src="img/kids2.png" alt="">
+            <img src="img/kids1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで オセアニア5_パラオ --------------->
+
+
+
+    <!------------- ゲームオーバーのページ ------------------->
+    <section class="bg_image gameOver">
+      <div class="bg_mask">
+        <div class="container_gameOver">
+          <div class="earth_wrap">
+            <img src="img/earth.png" alt="">
+            <p class="typ_text">残念 <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> <i
+                class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> ゲームオーバー <i
+                class="fas fa-plane fa-lg fa-skybule fa-rotate-315"></i>
+            </p>
+          </div>
+          <p class="typ_text">また挑戦してね <i class="fas fa-exclamation fa-lg fa-blush fa-rotate-22"></i> <i
+              class="fas fa-splotch fa-lg fa-yellow"></i>
+
+          </p>
+          <div class="kids_wrap">
+            <img src="img/kids3.png" alt="">
+            <img src="img/kids3.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------// ここまで ゲームオーバーのページ --------------->
+
+
+
+
+
+
+  </main>
+
+  <footer>
+    <div class="footer_wrap">
+
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
