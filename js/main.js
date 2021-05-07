@@ -271,165 +271,38 @@ $('#janken_btn').on('click', function () {
 
 
 
-
-// 値によって国別のページへ移動する
-// $('#win_btn').on('click', function () {
-//     switch (contry) {
-//         case 1:
-//             $('.winner_screen').fadeOut(500);
-//             $('.asia_1').fadeIn(500);
-//             break;
-//         case 2:
-//             $('.winner_screen').fadeOut(500);
-//             $('.asia_2').fadeIn(500);
-//             break;
-//         case 3:
-//             $('.winner_screen').fadeOut(500);
-//             $('.asia_3').fadeIn(500);
-//             break;
-//         case 4:
-//             $('.winner_screen').fadeOut(500);
-//             $('.asia_4').fadeIn(500);
-//             break;
-//         case 5:
-//             $('.winner_screen').fadeOut(500);
-//             $('.asia_5').fadeIn(500);
-//             break;
-//         case 6:
-//             $('.winner_screen').fadeOut(500);
-//             $('.europe_1').fadeIn(500);
-//             break;
-//         case 7:
-//             $('.winner_screen').fadeOut(500);
-//             $('.europe_2').fadeIn(500);
-//             break;
-//         case 8:
-//             $('.winner_screen').fadeOut(500);
-//             $('.europe_3').fadeIn(500);
-//             break;
-//         case 9:
-//             $('.winner_screen').fadeOut(500);
-//             $('.europe_4').fadeIn(500);
-//             break;
-//         case 10:
-//             $('.winner_screen').fadeOut(500);
-//             $('.europe_5').fadeIn(500);
-//             break;
-//         case 11:
-//             $('.winner_screen').fadeOut(500);
-//             $('.africa_1').fadeIn(500);
-//             break;
-//         case 12:
-//             $('.winner_screen').fadeOut(500);
-//             $('.africa_2').fadeIn(500);
-//             break;
-//         case 13:
-//             $('.winner_screen').fadeOut(500);
-//             $('.africa_3').fadeIn(500);
-//             break;
-//         case 14:
-//             $('.winner_screen').fadeOut(500);
-//             $('.africa_4').fadeIn(500);
-//             break;
-//         case 15:
-//             $('.winner_screen').fadeOut(500);
-//             $('.africa_5').fadeIn(500);
-//             break;
-//         case 16:
-//             $('.winner_screen').fadeOut(500);
-//             $('.southAmerica_1').fadeIn(500);
-//             break;
-//         case 17:
-//             $('.winner_screen').fadeOut(500);
-//             $('.southAmerica_2').fadeIn(500);
-//             break;
-//         case 18:
-//             $('.winner_screen').fadeOut(500);
-//             $('.southAmerica_3').fadeIn(500);
-//             break;
-//         case 19:
-//             $('.winner_screen').fadeOut(500);
-//             $('.southAmerica_4').fadeIn(500);
-//             break;
-//         case 20:
-//             $('.winner_screen').fadeOut(500);
-//             $('.southAmerica_5').fadeIn(500);
-//             break;
-//         case 21:
-//             $('.winner_screen').fadeOut(500);
-//             $('.northAmerica_1').fadeIn(500);
-//             break;
-//         case 22:
-//             $('.winner_screen').fadeOut(500);
-//             $('.northAmerica_2').fadeIn(500);
-//             break;
-//         case 23:
-//             $('.winner_screen').fadeOut(500);
-//             $('.northAmerica_3').fadeIn(500);
-//             break;
-//         case 24:
-//             $('.winner_screen').fadeOut(500);
-//             $('.northAmerica_4').fadeIn(500);
-//             break;
-//         case 25:
-//             $('.winner_screen').fadeOut(500);
-//             $('.northAmerica_5').fadeIn(500);
-//             break;
-//         case 26:
-//             $('.winner_screen').fadeOut(500);
-//             $('.oceania_1').fadeIn(500);
-//             break;
-//         case 27:
-//             $('.winner_screen').fadeOut(500);
-//             $('.oceania_2').fadeIn(500);
-//             break;
-//         case 28:
-//             $('.winner_screen').fadeOut(500);
-//             $('.oceania_3').fadeIn(500);
-//             break;
-//         case 29:
-//             $('.winner_screen').fadeOut(500);
-//             $('.oceania_4').fadeIn(500);
-//             break;
-//         case 30:
-//             $('.winner_screen').fadeOut(500);
-//             $('.oceania_5').fadeIn(500);
-//             break;
-//     }
-// });
-
 // ジャンケンに進むボタン
 function next_btn() {
     $('.janken_screen').fadeIn(500);
-    $('.contry_screen').fadeOut(500);
-    $('.continent_screen').fadeOut(500);
+    $('.contry_screen').hide();
+    $('.continent_screen').hide();
 }
 
 
 function continent_btn() {
     switch (contry) {
         case 5:
-            $('.contry_screen').fadeOut(500);
+            $('.contry_screen').hide();
             $('.europeContinent').fadeIn(500);
             break;
         case 10:
-            $('.contry_screen').fadeOut(500);
+            $('.contry_screen').hide();
             $('.africaContinent').fadeIn(500);
             break;
         case 15:
-            $('.contry_screen').fadeOut(500);
+            $('.contry_screen').hide();
             $('.southAmericaContinent').fadeIn(500);
             break;
         case 20:
-            $('.contry_screen').fadeOut(500);
+            $('.contry_screen').hide();
             $('.northAmericaContinent').fadeIn(500);
             break;
         case 25:
-            $('.contry_screen').fadeOut(500);
+            $('.contry_screen').hide();
             $('.oceaniaContinent').fadeIn(500);
             break;
         case 30:
-            $('.contry_screen').fadeOut(500);
+            $('.contry_screen').hide();
             $('.final_screen').fadeIn(500);
             break;
     }
@@ -445,32 +318,16 @@ $('.typ_text').t({
 });
 
 
-// ジャンケン進むボタン押すと、次のジャンケンページ
-// $('#next_btn').on('click', function () {
-//     $('.janken_screen').fadeIn(700);
-//     $('.contry_screen').fadeOut(500);
-// });
-
 
 // pointが0になったらゲームオーバー
 switch (point) {
     case 0:
-        $('.janken_screen').fadeOut(700);
+        $('.janken_screen').hide();
         $('.gameOver').fadeIn(500);
         break;
 }
 
 
-
-
-// ゲームオーバーページのはじめからボタン押すと全てリセットされ最初に戻る
-$('#reset_btn').on('click', function () {
-    $('.world_map').fadeIn(700);
-    $('.gameOver').fadeOut(500);
-    let point = 100;
-    let screen = 0;
-    let contry = 0;
-});
 
 
 

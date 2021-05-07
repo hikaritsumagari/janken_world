@@ -469,12 +469,12 @@ dd {
     margin: 0 0 10px;
 }
 /* 国別 */
-/* .asia_1{
+.asia_1{
     display: none;
 } 
 .asia_2{
     display: none;
-} */
+}
 .asia_2 .content_wrap img{
     width: auto;
     height: 200px;
@@ -483,13 +483,13 @@ dd {
     width: 95%;
 }
 
-/* .asia_3{
+.asia_3{
     display: none;
-}*/
+}
 
-/* .asia_4{
+.asia_4{
     display: none;
-} */
+}
 .asia_4 .heading:after {
     width: 90%;
 }
@@ -513,9 +513,9 @@ dd {
     text-align: start;
 }
 
-/* .asia_5{
+.asia_5{
     display: none;
-}  */
+} 
 .asia_5 .heading:after {
     width: 70%;
 }
@@ -541,39 +541,39 @@ dd {
 
 
 
-/* .europe_1{
+.europe_1{
     display: none;
-}*/
+}
 .europe_1 .heading:after {
     width: 70%;
 }
-/* .europe_2{
+.europe_2{
     display: none;
-} */
+}
 .europe_2 .heading:after {
     width: 80%;
 }
-/* .europe_3{
+.europe_3{
     display: none;
-} */
+}
 .europe_3 .heading:after {
     width: 70%;
 }
-/* .europe_4{
+.europe_4{
     display: none;
-} */
+}
 .europe_4 .heading:after {
     width: 70%;
 }
-/* .europe_5{
+.europe_5{
     display: none;
-} */
+}
 .europe_5 .heading:after {
     width: 80%;
 }
-/* .africa_1{
+.africa_1{
     display: none;
-} */
+}
 .africa_1 .heading{
     flex-direction: column;
 }
@@ -603,14 +603,14 @@ dd {
     text-align: start;
 }
 
-/* .africa_2{
+.africa_2{
     display: none;
-} */
+}
 
 
-/* .africa_3{
+.africa_3{
     display: none;
-} */
+}
 .africa_3 dl{
     width: 80%;
 }
@@ -631,9 +631,9 @@ dd {
     text-align: start;
 }
 
-/* .africa_4{
+.africa_4{
     display: none;
-} */
+}
 .africa_4 .heading:after {
     width: 90%;
 }
@@ -656,66 +656,66 @@ dd {
     font-size: 1.6rem;
     text-align: start;
 }
-/* .africa_5{
+.africa_5{
     display: none;
-} */
-/* .southAmerica_1{
+}
+.southAmerica_1{
     display: none;
-} */
+}
 .southAmerica_1 .heading:after {
     width: 90%;
 }
-/* .southAmerica_2{
+.southAmerica_2{
     display: none;
-} */
+}
 .southAmerica_2 .heading:after {
     width: 90%;
 }
-/* .southAmerica_3{
+.southAmerica_3{
     display: none;
-} */
+}
 .southAmerica_1 .heading:after {
     width: 90%;
 }
-/* .southAmerica_4{
+.southAmerica_4{
     display: none;
-} */
-/* .southAmerica_5{
+}
+.southAmerica_5{
     display: none;
-} */
+}
 .southAmerica_5 .heading:after {
     width: 90%;
 }
-/* .northAmerica_1{
+.northAmerica_1{
     display: none;
-} */
+}
 .northAmerica_1 .heading:after {
     width: 90%;
 }
-/* .northAmerica_2{
+.northAmerica_2{
     display: none;
-} */
+}
 .northAmerica_2 .heading:after {
     width: 90%;
 }
-/* .northAmerica_3{
+.northAmerica_3{
     display: none;
-} */
+}
 .northAmerica_3 .heading:after {
     width: 90%;
 }
-/* .northAmerica_4{
+.northAmerica_4{
     display: none;
-} */
+}
 .northAmerica_4 .heading:after {
     width: 90%;
 }
-/* .northAmerica_5{
+.northAmerica_5{
     display: none;
-} */
-/* .oceania_1{
+}
+.oceania_1{
     display: none;
-} */
+}
 .oceania_1 dl{
     width: 80%;
 }
@@ -735,27 +735,27 @@ dd {
     font-size: 1.6rem;
     text-align: start;
 }
-/* .oceania_2{
+.oceania_2{
     display: none;
-} */
-/* .oceania_3{
+}
+.oceania_3{
     display: none;
-} */
+}
 .oceania_3 .heading:after {
     width: 90%;
 }
-/* .oceania_4{
+.oceania_4{
     display: none;
-} */
+}
 .oceania_4 .heading{
     flex-direction: column;
 }
 .oceania_4 .heading:after {
     width: 90%;
 }
-/* .oceania_5{
+.oceania_5{
     display: none;
-}  */
+} 
 
 
 
