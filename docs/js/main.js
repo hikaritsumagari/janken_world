@@ -137,122 +137,302 @@ $('#janken_btn').on('click', function () {
             case 1:
                 $('.janken_screen').hide();
                 $('.asia_1').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 2:
                 $('.janken_screen').hide();
                 $('.asia_2').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 3:
                 $('.janken_screen').hide();
                 $('.asia_3').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 4:
                 $('.janken_screen').hide();
                 $('.asia_4').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 5:
                 $('.janken_screen').hide();
                 $('.asia_5').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 6:
                 $('.janken_screen').hide();
                 $('.europe_1').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 7:
                 $('.janken_screen').hide();
                 $('.europe_2').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 8:
                 $('.janken_screen').hide();
                 $('.europe_3').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 9:
                 $('.janken_screen').hide();
                 $('.europe_4').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 10:
                 $('.janken_screen').hide();
                 $('.europe_5').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 11:
                 $('.janken_screen').hide();
                 $('.africa_1').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 12:
                 $('.janken_screen').hide();
                 $('.africa_2').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 13:
                 $('.janken_screen').hide();
                 $('.africa_3').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 14:
                 $('.janken_screen').hide();
                 $('.africa_4').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 15:
                 $('.janken_screen').hide();
                 $('.africa_5').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 16:
                 $('.janken_screen').hide();
                 $('.southAmerica_1').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 17:
                 $('.janken_screen').hide();
                 $('.southAmerica_2').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 18:
                 $('.janken_screen').hide();
                 $('.southAmerica_3').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 19:
                 $('.janken_screen').hide();
                 $('.southAmerica_4').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 20:
                 $('.janken_screen').hide();
                 $('.southAmerica_5').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 21:
                 $('.janken_screen').hide();
                 $('.northAmerica_1').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 22:
                 $('.janken_screen').hide();
                 $('.northAmerica_2').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 23:
                 $('.janken_screen').hide();
                 $('.northAmerica_3').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 24:
                 $('.janken_screen').hide();
                 $('.northAmerica_4').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 25:
                 $('.janken_screen').hide();
                 $('.northAmerica_5').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 26:
                 $('.janken_screen').hide();
                 $('.oceania_1').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 27:
                 $('.janken_screen').hide();
                 $('.oceania_2').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 28:
                 $('.janken_screen').hide();
                 $('.oceania_3').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 29:
                 $('.janken_screen').hide();
                 $('.oceania_4').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
             case 30:
                 $('.janken_screen').hide();
                 $('.oceania_5').fadeIn(600);
+                $('.typ_text').t({
+                    delay: 1,
+                    speed: 50,
+                    speed_vary: true,
+                    repeat: 0,
+                });
                 break;
         }
     } else if (result === 1) {
@@ -284,38 +464,75 @@ function continent_btn() {
         case 5:
             $('.contry_screen').hide();
             $('.europeContinent').fadeIn(500);
+            $('.typ_text').t({
+                delay: 1,
+                speed: 50,
+                speed_vary: true,
+                repeat: 0,
+            });
             break;
         case 10:
             $('.contry_screen').hide();
             $('.africaContinent').fadeIn(500);
+            $('.typ_text').t({
+                delay: 1,
+                speed: 50,
+                speed_vary: true,
+                repeat: 0,
+            });
             break;
         case 15:
             $('.contry_screen').hide();
             $('.southAmericaContinent').fadeIn(500);
+            $('.typ_text').t({
+                delay: 1,
+                speed: 50,
+                speed_vary: true,
+                repeat: 0,
+            });
             break;
         case 20:
             $('.contry_screen').hide();
             $('.northAmericaContinent').fadeIn(500);
+            $('.typ_text').t({
+                delay: 1,
+                speed: 50,
+                speed_vary: true,
+                repeat: 0,
+            });
             break;
         case 25:
             $('.contry_screen').hide();
             $('.oceaniaContinent').fadeIn(500);
+            $('.typ_text').t({
+                delay: 1,
+                speed: 50,
+                speed_vary: true,
+                repeat: 0,
+            });
             break;
         case 30:
             $('.contry_screen').hide();
             $('.final_screen').fadeIn(500);
+            $('.typ_text').t({
+                delay: 1,
+                speed: 50,
+                speed_vary: true,
+                repeat: 0,
+            });
             break;
     }
 }
 
 
 // 国別のページ
-$('.typ_text').t({
-    delay: 1,
-    speed: 50,
-    speed_vary: true,
-    repeat: 0,
-});
+// $('.typ_text').t({
+//     delay: 1,
+//     speed: 50,
+//     speed_vary: true,
+//     repeat: 0,
+// });
+
 
 
 
